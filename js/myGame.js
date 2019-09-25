@@ -7,7 +7,7 @@ let arman = new Image(),
     killer = new Image(),
     killer_rotation = new Image();
 
-let delta = Math.floor(Math.random() * (150 - 120 + 1)) + 120;
+let delta = 120;
 
 let armXPos = 10,
     armYPos = 150,
@@ -86,7 +86,7 @@ function draw() {
 
     ctx.fillStyle = "#000";
     ctx.font = "24px Impact";
-    ctx.fillText("Очки: " + score, 10, cvs.height - 30);
+    ctx.fillText("Очки: " + score, 200, cvs.height - 30);
 
     requestAnimationFrame(draw);
 }
