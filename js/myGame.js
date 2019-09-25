@@ -7,11 +7,11 @@ let arman = new Image(),
     killer = new Image(),
     killer_rotation = new Image();
 
-let delta = 120;
+let delta = Math.floor(Math.random() * (150 - 120 + 1)) + 120;
 
 let armXPos = 10,
     armYPos = 150,
-    gravitation = 1;
+    gravitation = 1.5;
 
 let arr = [];
 
@@ -27,7 +27,7 @@ let score = 0;
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
-    armYPos -= 20;
+    armYPos -= 25;
 }
 
 arman.src = "img/Hero.png";
@@ -54,7 +54,7 @@ function draw() {
 
         arr[i].x--;
 
-        if (arr[i].x == 125) {
+        if (arr[i].x == 110) {
             arr.push({
                 x: cvs.width,
                 y: Math.floor(Math.random() * killer_rotation.height) - killer_rotation.height
