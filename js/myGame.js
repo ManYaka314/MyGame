@@ -63,7 +63,7 @@ function draw() {
         if (armXPos + arman.width >= arr[i].x &&
             armXPos <= arr[i].x + killer_rotation.width &&
             (armYPos <= arr[i].y + killer_rotation.height ||
-                armYPos + arman.height >= arr[i].y +
+                armYPos + arman.height >= 0 +
                 killer_rotation.height + delta) || 
                 armYPos + arman.height >= cvs.height - footer.height) {
             setTimeout('location.reload()', 3500);
